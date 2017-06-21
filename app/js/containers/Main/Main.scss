@@ -1,28 +1,13 @@
-.home{
-		//background: url('../../../img/bg.jpg')  no-repeat #243a00;
-		height: 1000px;
-}
+
 .wrapper {
-	//min-width: 1260px;
-	//max-width: 1600px;
 	height: 100%;
-	//margin: 50px 50px 0;
-	//margin: auto;
 	display: table;
 	width: 100%;
 }
 .container{
 	height: 100%;
 }
-// .footer{
-// 	height: 127px;
-// 	padding-top: 1px;
-// }
 .footer {
-	//position: absolute;
-	//bottom: 0;
-	//left: 35%;
-	//margin-left: 30%;
 	height: 127px;
 	padding-top: 1px;
 	
@@ -77,8 +62,8 @@ h1 {
 	position: absolute;
     display: block;
     z-index: 11;
-    top: 47.7%;
-    left: 18%;
+    top: 22.7%;
+    left: 19%;
     height: 370px;
     transform: scale(0.5);
 }
@@ -93,6 +78,11 @@ h1 {
     width: 172px;
     background: #ffa200;
     height: 25px;
+}
+.wrap_payment{
+	position: absolute;
+	top: 514px;
+	left: 39px;
 }
 
 .your-status>span {
@@ -110,6 +100,8 @@ h1>span {
 	margin-top: -173px;
 	margin-left: 152px;
 	height: 734px;
+	top: -54px;
+	position: absolute;
 	width: 837px;
 	transform: scale(0.61);
 }
@@ -196,9 +188,10 @@ h1>span {
 	background: none;
 	width: 900px;
 	height: 900px;
-	position: relative;
+	position: absolute;
 	margin: auto;
-	top: -1188px;
+	top: 117px;
+	left: 12%;
 }
 
 .global-information {

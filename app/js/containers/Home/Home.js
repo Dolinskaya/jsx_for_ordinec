@@ -27,18 +27,7 @@ export default class Home extends Component {
 			<span className="t-green"><br />или </span>
 			<a href="" className="signin">войти в свой аккаунт</a>
 		</div>
-		{/*
-		<form onSubmit={this.onSubmit}>
-			<input type="text" className="form_username" />
-			<input type="password" className="form_password" />
-			<a href="" className="reset-psw">Восстановить пароль</a>
-			<br /><input type="checkbox" className="remember" id="remember" />
-			<label className="rem-me" htmlFor="remember">Запомнить меня</label>
-			<br /><button type="submit" className="entry">войти</button>
-		</form>
-		*/}
 		<Login />
-		{/*<NavLink to="/login">Войти</NavLink>*/}
 		<div className="content">
 			<h1 className="content_title">Преимущества <br /></h1>
 			<p className="content_desc">работы с Ордынцем</p>
@@ -123,9 +112,6 @@ export default class Home extends Component {
 					<span>© 2016-2017. Ордынец</span>
 				</footer>
 				</div>
-
-        
-
      </div>
     );
   }

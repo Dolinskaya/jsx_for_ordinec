@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import {push} from 'react-router-redux';
 import Menu from '../../components/Menu/Menu.js';
 
-require('./Offers.scss');
+require('./Statistics.scss');
 
-export default class Offers extends Component {
+export default class Statistics extends Component {
   render() {
     return (
       <div className="home">

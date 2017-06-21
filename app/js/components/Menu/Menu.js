@@ -1,10 +1,15 @@
 import React, {cloneElement, Component} from 'react';
 import { Link } from 'react-router';
-//import NavLink from '../../components/NavLink/NavLink';
+import NavLink from '../../components/NavLink/NavLink';
 //import Orc from './images/lk-big-orc-level-1.png'
 require('./Menu.scss');
 
 class Menu extends React.Component {
+
+  constructor(){
+    super();
+   this.state = {showHideSidenav:"hidden"}
+    };
       render() {
             return (
                 <div className="menu">
@@ -20,10 +25,10 @@ class Menu extends React.Component {
             <div className="menu-wrap">
                 <nav className="nav">
                     <ul>
-                        <li><Link onlyActiveOnIndex={true} to="offers" >Офферы</Link></li>
-                        <li><Link to="#">Статистика</Link></li>
-                        <li><Link to="#">Настройки </Link></li>
-                        <li className="level-0">
+                        <li><NavLink onlyActiveOnIndex={true} to="offers" >Офферы</NavLink></li>
+                        <li><NavLink to="statistics">Статистика</NavLink></li>
+                        <li><a onClick={this.toggleSidenav.bind(this)} href="#" >Настройки</a></li>
+                        <li className={this.state.showHideSidenav}>
                             <ul>
 
                                 <li><Link to="#">Личный кабинет</Link></li>
@@ -61,7 +66,13 @@ class Menu extends React.Component {
     </div>
     {this.props.children}
     </div>
-                )
-      }
+
+            )
+        }
+    toggleSidenav() {
+    var css = (this.state.showHideSidenav === "hidden") ? "show" : "hidden";
+    this.setState({"showHideSidenav":css});
 }
+}
+
 export default (Menu);

@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import {Login} from '../../components/Login/Login.js';
 import {loginActions} from '../../components/Actions/loginActions';
 import {Link} from 'react-router';
+import Cabinet from '../Cabinet/Cabinet.js';
 const styles = require("./App.scss");
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
 		return (
 			<div className="mainContainer">
 				<section className="content">
+
 					{this.props.children}
 				</section>
 			</div>

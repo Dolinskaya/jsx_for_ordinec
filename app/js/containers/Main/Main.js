@@ -19,20 +19,22 @@ export default class Main extends Component {
     return (
       <div className="home">
         <div className="wrapper">
-        <div className="importMenu">
-        	<Menu />
-        </div>
+        				   <div className="importMenu">
+        					<Menu />
+        				</div>
         	<div className="right-side">
 				
 				<div className="main-page">
 					<div className="big-ork"></div>
 					<div className="chise"></div>
 				</div>
-				<h1>в вашей казне <span id="user-ballance">{clientData.user_ballance} руб.</span></h1>
-			<div className="btn-overlay">
-			<button className="sml-btn sml-btn-blue">Заказать выплату</button>
+				<div className="wrap_payment">
+					<h1>в вашей казне <span id="user-ballance">{clientData.user_ballance} руб.</span></h1>
+					<div className="btn-overlay">
+					<button className="sml-btn sml-btn-blue">Заказать выплату</button>
 					</div>
-			</div>
+				</div>
+			</div>					{this.props.children}
     		{/*start canvas*/}
     		<div className="wrapper_graph">
 		        <div className="graph-overlay">
