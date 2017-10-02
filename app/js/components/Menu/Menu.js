@@ -1,8 +1,15 @@
 import React, {cloneElement, Component} from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import NavLink from '../../components/NavLink/NavLink';
+import { apiActions } from '../Actions/api.js'
 //import Orc from './images/lk-big-orc-level-1.png'
 require('./Menu.scss');
+
+
+@connect({
+    apiActions: apiActions
+    })
 
 class Menu extends React.Component {
 
@@ -25,13 +32,13 @@ class Menu extends React.Component {
             <div className="menu-wrap">
                 <nav className="nav">
                     <ul>
-                        <li><NavLink onlyActiveOnIndex={true} to="offers" >Офферы</NavLink></li>
+                        <li><NavLink onClick={() => this.props.apiActions()} onlyActiveOnIndex={true} to="offers">Офферы</NavLink></li>
                         <li><NavLink to="statistics">Статистика</NavLink></li>
                         <li><a onClick={this.toggleSidenav.bind(this)} href="#" >Настройки</a></li>
                         <li className={this.state.showHideSidenav}>
                             <ul>
 
-                                <li><Link to="#">Личный кабинет</Link></li>
+                                <li><NavLink to="cabinet">Личный кабинет</NavLink></li>
                                 <li><Link to="#">Вывод средств</Link></li>
                                 <li><Link to="#">Предложения</Link></li>
                             </ul>
@@ -74,5 +81,7 @@ class Menu extends React.Component {
     this.setState({"showHideSidenav":css});
 }
 }
-
+Menu.propTypes = {
+  apiActions: React.PropTypes.func.isRequired
+}
 export default (Menu);

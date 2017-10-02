@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   display: table-cell;
   position: relative;
   left: 26px;
-  top: -35px;
+  top: -11px;
   font-family: 'CORP';
   z-index: 1;
 }
@@ -22,11 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .show{
    display:block;
+   margin-left: 42px;
 }
 
 .menu-wrap{
   background: url('../../../img/menu-bg.png') no-repeat;
-  padding-top: 32px;
+  padding-top: 21px;
+  padding-left: 32px;
 }
 .menu-header{
   height: 81px !important;
@@ -46,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
 
 ul{
       list-style: none;
+}
+ul li{
+  padding: 3px 0;
 }
 
 .nav>ul>li>a:hover {

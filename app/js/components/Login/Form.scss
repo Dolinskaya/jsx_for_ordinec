@@ -1,0 +1,93 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font-variant-ligatures: inherit;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  /*font-family: Times New Roman;*/
+
+  /* vertical-align: baseline; */
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  width: 238px;
+  height: 39px;
+  border: none;
+  text-indent: 18px;
+  background-color: rgb(250, 255, 189);
+}
+input[type="text"].Logout,
+input[type="password"].Logout,
+input[type="email"].Logout {
+  outline: none;
+  background: #37660c;
+  border: 1px solid #548c21;
+  font-size: 13px;
+  font-family: Tahoma;
+  color: #fff;
+  display: table-cell;
+  margin: 0 4px;
+}
+.wrap-two-input {
+  width: 495px;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+}
+.wrap-two-input {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="password"].bottom,
+input[type="text"].bottom{
+  margin-top: 15px;
+}
+#registration {
+  height: 300px;
+  display: block;
+}
+#login {
+  display: block;
+}
+
+#registration>input.UserAgreement {
+  margin-top: 3px;
+  text-align: center;
+  text-indent: 5px;
+  font: 12px 'Tahoma';
+  color: #fff;
+  cursor: pointer;
+}
+.rem-me {
+  cursor: pointer;
+}
+#registration button[data-id="1"] {
+  display: block;
+  padding: 13px;
+  width: 238px;
+  margin: -5px auto;
+  //background: url(./homeimgcss/login-btn-bg.png) no-repeat;
+  outline: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+
+}
+.btn__registration {
+  font-family: Bemount-line;
+}
+.btn-preloader-img {
+  display: none;
+}

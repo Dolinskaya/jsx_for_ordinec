@@ -1,0 +1,158 @@
+
+.cabinet_title{
+	    line-height: 46px;
+	    text-transform: uppercase;
+	    font-size: 16px;
+	    padding-left: 28px;
+}
+.cabinet-cat_wrap{
+	margin-top: 28px;
+	//justify-content: space-between;
+	  margin-bottom: 44px;
+	  color: #909090;
+    padding: 15px 0 0;
+    font: 11px 'Tahoma';
+    width: 100%;
+
+& label{
+ //position: absolute;
+}
+& input{
+	position: relative;
+	top: 25px;
+	//left: -154px;
+	    padding-right: 47px;
+}
+
+}
+.cabinet_wrap-btn{
+	margin-bottom: 32px;
+}
+.cabinet_title-finance{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+table.data-table {
+	margin: 7px 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.data-table th,
+table.data-table td {
+	height: 32px;
+	padding-left: 8px;
+	font: 11px 'Tahoma';
+}
+
+table.data-table thead tr {
+	font: 11px 'Tahoma';
+    text-align: left;
+    background: #f5f5f5;
+    border: 1px solid #c7c7c7;
+}
+
+table.data-table tbody tr {
+	border: 1px solid #c7c7c7;
+	font: 11px 'Tahoma';
+	color: #909090;
+}
+
+table.data-table tbody span {
+	font: 12px 'Tahoma';
+	display: block;
+	line-height: 16px;
+	color: #000;
+}
+
+table.data-table a {
+	color: #04748c;
+}
+.cabinet_content{
+	border: 1px solid #dcdcdc;
+    margin: 0px 15px 0px 0;
+    outline: none;
+    text-indent: 16px;
+    height: 34px;
+    //width: 90%;
+    border-bottom: 2px solid #dcdcd;
+}
+.repeat_password{
+	//left: -100px;
+}
+.clearfix{
+	position: relative;
+
+	&:after{
+		position: absolute;
+		display: table;
+		height: 10px;
+		width: 100%;
+	}
+}
+.btn{
+	float: right;
+	margin-right: 83px !important;
+	margin-top: -16px;
+	padding: 12px 99px !important;
+}
+.component_labels-group{
+	width: 54.3%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 68px;
+    font-size: 12px;
+    color: #909090;
+}
+label{
+	font-size: 12px !important;
+}
+.item_label{
+    float: right;
+    margin-right: 338px;
+    position: relative; 
+    float: right;
+    margin-right: 338px;
+    position: relative;
+    top: 52px;
+    color: #909090;
+    top: 52px;
+    color: #909090;
+}
+.component_labels-bottom-group{
+	width: 27.3%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 68px;
+    left: 0;
+    font-size: 12px;
+    color: #909090;
+}
+.add-wallet{
+    position: relative;
+    right: -11px;
+    margin-left: 0px !important;
+    margin-right: 113px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 20px;
+    border: 1px solid #8d9f30;
+    text-transform: uppercase;
+    font: 16px 'Bemount';
+    background: #819519;
+    color: #fff;
+    margin-top: 23px;
+    cursor: pointer;
+    outline: none;
+}
+.save-btn{
+	padding: 12px 96px !important;
+	margin-left: 0 !important;
+}
+.setting-btn{
+ margin-left: 6px !important;
+ padding: 12px 36px !important;
+}

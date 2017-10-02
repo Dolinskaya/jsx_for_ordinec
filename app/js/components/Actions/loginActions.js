@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Uri from 'jsuri';
 import setAuthorizationToken from '../../utils/setAuthorizationToken.js';
-//import { SET_CURRENT_USER } from './types.js';
 import {
   LOGIN_REQUEST,
   LOGIN_FAIL, //eslint-disable-line no-unused-vars
@@ -15,21 +14,22 @@ import {
 } from '../../constants/Routing.js';
 
 
+class InterceptorUtil {
+  constuctor() {
+    this.interceptor = null;
+  }
 
-// export function setCurrentUser(user){
-// 	return {
-// 		type: SET_CURRENT_USER,
-// 		user
-// 	}
-// }
+  setInterceptor(interceptor) {
+    this.interceptor = interceptor;
+  }
 
-// export function logout() {
-// 	return dispatch => {
-// 		localStorage.removeItem('accessToken');
-// 		setAuthorizationToken(false);
-// 		dispatch(setCurrentUser({}));
-// 	}
-// }
+  getInterceptor() {
+    return this.interceptor;
+  }
+}
+
+export default new InterceptorUtil;
+
 
  export function login(payload) {
    return (dispatch) => {
@@ -46,7 +46,6 @@ import {
            isAuthenticated: true
          }
        })
-
        dispatch({
          type: ROUTING,
          payload: {
@@ -54,7 +53,7 @@ import {
            nextUrl: '/main'
          }
        })
-     }, 2000)
+           }, 3300)
    }
  }
 
@@ -69,13 +68,48 @@ export function loginActions(data) {
 	return dispatch => {
 		 return axios.post('https://auth2.ordinec.ru/oauth2/token', data)
 		 .then( res => {
-		 	const token = res.data.access_token;
-		 	console.log(token);
+      if (res.status === 200){
+        const token = res.data.access_token;
+        const refreshToken = res.data.refresh_token;
+        console.log(token);
+        localStorage.setItem('accessToken', token);
+        localStorage.setItem('refreshToken', refreshToken);
+        setAuthorizationToken(token);
+        dispatch(login(token));
 
-		 	localStorage.setItem('accessToken', token);
-		 	setAuthorizationToken(token);
-		 	dispatch(login(token));
+      }
 
 		 });
-	}
+     // .then( err => {
+     //    if (err.status === 401 && err.data.error_description === 'The access token provided has expired.') {
+     //       localStorage.removeItem('accessToken');
+     //      dispatch(axios.post('https://auth2.ordinec.ru/oauth2/token', grant_type=='refresh_token', data))
+     //    };
+
+     // });
+
 }
+}
+
+
+// axios.interceptors.response.use(function (response) {
+//   return response;
+// }, function (error) {
+
+//   const originalRequest = error.config;
+
+//   if (error.response.status === 401 && !originalRequest._retry) {
+
+//     originalRequest._retry = true;
+
+//     const refreshToken = window.localStorage.getItem('refreshToken');
+//     return axios.post('https://auth2.ordinec.ru/oauth2/token', { refreshToken })
+//       .then(({data}) => {
+//         localStorage.setItem('token', data.token);
+//         localStorage.setItem('refreshToken', data.refreshToken);
+//         return axios(originalRequest);
+//       });
+//   }
+
+//   return Promise.reject(error);
+// });

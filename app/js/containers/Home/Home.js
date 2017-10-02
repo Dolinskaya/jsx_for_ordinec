@@ -2,11 +2,47 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import Login from '../../components/Login/Login';
+import Form from '../../components/Login/Form';
 import NavLink from '../../components/NavLink/NavLink';
 
 require('./Home.scss');
 
+class RenderLogin extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            showReg: false,
+            showLogin: true
+        }
+    }
+    onClickreg(e){
+        e.preventDefault();
+        this.setState({showReg: true,
+            showLogin: false})
+    }
+    onClickLog(e){
+        e.preventDefault();
+        this.setState({showReg:false,
+            showLogin: true})
+    }
+    render() {
+        return (
+			<div>
+				<div className="main_text">
+				<a href="" className="register" onClick={this.onClickreg.bind(this)}>Зарегистрироваться</a>
+				<span className="t-green"><br />или </span>
+				<a href="" className="signin" onClick={this.onClickLog.bind(this)} >войти в свой аккаунт</a>
+				</div>
+                {this.state.showReg && < Form />}
+                {this.state.showLogin && < Login />}
+			</div>
+        )
+    }
+};
+
 export default class Home extends Component {
+
+
   render() {
     return (
     <div className="mainPage">
@@ -22,12 +58,7 @@ export default class Home extends Component {
 		<div className="wrapper_img">
 			<img src="../../../../assets/images/lk-orc-level-4.png" alt="" className="main_img" />
 		</div>
-		<div className="main_text">
-			<a href="" className="register">Зарегистрироваться</a>
-			<span className="t-green"><br />или </span>
-			<a href="" className="signin">войти в свой аккаунт</a>
-		</div>
-		<Login />
+		<RenderLogin />
 		<div className="content">
 			<h1 className="content_title">Преимущества <br /></h1>
 			<p className="content_desc">работы с Ордынцем</p>

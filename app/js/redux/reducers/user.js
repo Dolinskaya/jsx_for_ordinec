@@ -3,6 +3,7 @@ import {
   LOGIN_REQUEST,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  LOGIN_REFRESH,
   LOGOUT_SUCCESS
 } from '../../constants/User.js';
 
@@ -17,7 +18,17 @@ export default function userstate(state = initialState, action) {
       return state
 
     case LOGIN_SUCCESS:
-      return {...state, name: action.payload.name, isAuthenticated: action.payload.isAuthenticated}
+      return {
+        ...state,
+        name: action.payload.name,
+       isAuthenticated: action.payload.isAuthenticated
+      }
+
+
+    case LOGIN_REFRESH:
+    return {
+      ...state
+    }
 
     case LOGIN_FAIL:
       // TODO

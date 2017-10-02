@@ -13,3 +13,13 @@ body{
   width: 100%;
   position: absolute;
 }
+.cabinet_field,
+.cabinet_content{
+	border: 1px solid #dcdcdc !important;
+	border-bottom: 2px solid #dcdcdc !important;
+	margin: 0px 15px 0px 0 !important;
+    outline: none !important;
+    text-indent: 16px !important;
+    height: 34px !important;
+    background: #fff !important;
+}

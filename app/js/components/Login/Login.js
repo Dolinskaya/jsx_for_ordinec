@@ -15,7 +15,7 @@ class Login extends React.Component {
       this.state = {
         username: '',
         password: '',
-        grant_type: Config.grant_type,
+         grant_type: Config.grant_type,
         client_id: Config.clientId,
         client_secret: Config.clientSecret,
         //verifyCode: Config.verifyCode,
@@ -63,9 +63,9 @@ class Login extends React.Component {
   }
 }
 
-function mapStateToProps() {
-  return {}
-}
+// function mapStateToProps() {
+//   return {}
+// }
 
 function mapDispatchToProps(dispatch) {
   return {
